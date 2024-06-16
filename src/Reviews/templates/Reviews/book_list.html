@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Lists</title>
+</head>
+<body>
+ <h1>BookRev Application</h1>
+ <hr>
+ <ul>
+  {% for item in book_list  %}
+  <li>Title: {{item.book.title}}</li>
+  <li>Publisher: {{item.book.publisher}}</li>
+  <li>Publication Date: {{item.book.publisher}}</li>
+  <li>Rating: {{item.book_rating}}</li>
+  <li>Number of reviews: {{item.number_of_reviews}}</li>
+  
+  {% if item.book_rating is null %}
+  <p>Provide a rating for this book later</p>
+    
+  {% endif %}
+    
+  
+  {% endfor %}
+ </ul>
+</body>
+</html>

@@ -8,13 +8,6 @@
 <body>
   {% comment %} <h2>Hello {{name}} {{last}}</h2> {% endcomment %}
   <h1>Welcome to BookRev</h1>
-  <form action="" method="get">
-    {% csrf_token %}
-    <input type="text" name="name"  />
-    <input type="text" name="last_name"  />
-  <button type="submit">Submit</button>
-  </form>
-  <h2>Hello {{name | title}} {{last}}</h2>
-
+  
 </body>
 </html>
